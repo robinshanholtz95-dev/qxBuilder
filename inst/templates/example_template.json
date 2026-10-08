@@ -1,0 +1,30 @@
+{
+  "survey_id": "SV_xxxxxxxxxxxxxxx",
+  "block": {
+    "mode": "new",
+    "description": "Book Excerpt Highlights"
+  },
+  "page_breaks": {
+    "every": 4
+  },
+  "questions": [
+    {
+      "type": "blank_text"
+    },
+    {
+      "type": "highlight",
+      "args": {
+        "text": "the quick brown fox jumps over the lazy dog"
+      }
+    },
+    {
+      "type": "book_excerpt",
+      "generator": true,
+      "args": {
+        "file": "path/to/your/book_excerpt.txt",
+        "max_words": 200,
+        "max_header_words": 10
+      }
+    }
+  ]
+}

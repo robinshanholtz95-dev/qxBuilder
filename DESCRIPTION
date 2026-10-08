@@ -1,0 +1,25 @@
+Package: qxBuilder
+Type: Package
+Title: Build and Populate Qualtrics Surveys from R and JSON Templates
+Version: 0.1.0
+Authors@R: person("Robin", "Shanholtz", email = "robinshanholtz95@gmail.com", role = c("aut", "cre"))
+Description: A thin wrapper around the Qualtrics Survey Definitions API for
+    programmatically creating survey blocks and questions, and for driving
+    that creation from a JSON template file. Grew out of a series of
+    hand-written scripts for adding blank Text Entry and interactive
+    "Highlight" questions to a Qualtrics survey; generalizes that work into
+    reusable, testable building blocks. Question-type support is split into
+    two confidence tiers, documented per-function: types verified against a
+    live Qualtrics account (Text Entry, Highlight), and best-effort types
+    built from Qualtrics's documented schema but not yet exercised against a
+    live API call (Multiple Choice, Matrix) -- see the "Confidence" section
+    of each question builder's documentation.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.1
+Imports:
+    httr,
+    jsonlite
+Suggests:
+    qualtRics
